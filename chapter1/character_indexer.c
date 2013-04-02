@@ -30,6 +30,7 @@ main() {
 
 
 	// adding an approximate horizontal histogram to the end from exercise 1-13
+	// all of this really should be put into a function, but functions are the next section!
 	for ( index = 0; index < 10; ++index ) {
 		printf("%d: ", index);
 		for ( index2 = 100 * number_of_digits[index] / max_number_of_digits; index2 >= 0; --index2 )
