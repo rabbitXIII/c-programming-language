@@ -8,8 +8,10 @@
 main() {
 	int character, number_of_lines, number_of_words, number_of_characters, 
 	    current_state;
+
 	current_state = OUTSIDE_WORD;
 	number_of_lines = number_of_words = number_of_characters = 0;
+
 	while ( (character = getchar()) != EOF ) {
 		++number_of_characters;
 		if ( character == '\n' ) 
