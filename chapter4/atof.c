@@ -35,3 +35,7 @@ int get_line_length( char source[], int limit ) {
 	return index;
 }
 
+double atoi( char source[] ) {
+	double atof( char s[] );
+	return (int) atof(source);
+}
