@@ -1,12 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "calc.h"
 
 #define MAX_OPERAND_SIZE 100
-#define NUMBER_FOUND '0'
-
-int get_op_character( char [] );
-void push( double );
-double pop( void );
 
 /* post-fix calculator */
 
@@ -48,26 +44,5 @@ main() {
 			}
 	}
 	return 0;
-}
-
-
-int get_op_character( char source[] ) {
-	int index, character;
-	while( (source[0] = character = get_character()) == ' ' || character == '\t' )
-		;
-	source[1] = '\0';
-	if( !isdigit(character) && character != '.' )
-			return character;
-	index = 0;
-	if( isdigit(character) )
-		while( isdigit( source[++index] = character = getchar()) )
-			;
-	if( character == '.' )
-		while( isdigit( source[++index] = character = getchar()) )
-			;
-	source[index] = '\0';
-	if( character != EOF ) 
-		unget_character(character);
-	return NUMBER_FOUND;
 }
 
